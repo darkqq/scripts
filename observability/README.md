@@ -23,8 +23,9 @@ docker compose up -d
 3. Add envs
    ```env
       OTEL_EXPORTER_OTLP_ENDPOINT=http://<collector-addr>:4318
-      OTEL_LOGS_EXPORTER=otlp;OTEL_METRICS_EXPORTER=otlp
-      OTEL_RESOURCE_ATTRIBUTES=deployment.environment\=<profile>
+      OTEL_LOGS_EXPORTER=otlp
+      OTEL_METRICS_EXPORTER=otlp
+      OTEL_RESOURCE_ATTRIBUTES=deployment.environment=<profile>
       OTEL_SERVICE_NAME=<unique-service-name>
       OTEL_TRACES_EXPORTER=otlp
    ```
